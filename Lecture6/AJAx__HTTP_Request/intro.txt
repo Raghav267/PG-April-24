@@ -1,0 +1,16 @@
+Q= What is Ajax?
+A = Ajax is a web technique which is used to send the request withour refershing the current page.
+
+Q = Data fromats
+A = 1. jSON , 2.xml format
+
+
+WE have two functions
+1.JSON.stringify();
+2.JSON.parse();
+
+API(Application Program Interface)
+
+
+Q= How to send the http request and how many methods??
+Ans= Lecture7 ;
