@@ -1,0 +1,18 @@
+.sectionClass{
+    margin: 20px auto;
+    border: 2px solid black;
+    width: 700px;
+    height: 80vh;
+    overflow: scroll;
+}
+
+.sectionClass h1{
+    text-align: center;
+}
+
+.sectionClass form input {
+    border: 2px solid;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
