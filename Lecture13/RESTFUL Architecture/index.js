@@ -4,10 +4,8 @@ const path = require("path");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.use(express.urlencoded({ extended: true }))
 
-app.get('/', (req, res) => {
-    res.send("Home Route");
-})
 
 let blogs = [
     {
@@ -30,16 +28,36 @@ let blogs = [
     },
 ];
 
+app.get('/', (req, res) => {
+    res.send("Home Route");
+})
+
 //Get all the blogs
 app.get("/blogs", (req, res) => {
     // res.send("We are on Blogs pages");
     res.render("index", { blogs });
 })
 
-// create a blog
-app.post("/blogs", (req, res) => {
-    res.send("we ARE CREATING A BLOG.")
+app.get("/blogs/new", (req, res) => {
+    // res.send("we ARE CREATING A BLOG.")
+    res.render("new");
 
+})
+
+app.post("/blogs", (req, res) => {
+    // console.log(req.body);
+    const { title, imageUrl, blogText } = req.body;
+    // res.send(req.body)
+    blogs.push({ id: blogs.length, title, imageUrl, blogText });
+    res.redirect("/blogs") // redirect means rotes
+})
+
+// to show one blog
+
+app.get("/blogs/:blogid", (req, res) => {
+    const { blogid } = req.params;
+    const blog = blogs.find((blog) => blog.id === parseInt(blogid))
+    res.render("show", { blog });
 })
 
 

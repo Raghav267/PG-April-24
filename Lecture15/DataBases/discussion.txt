@@ -1,0 +1,21 @@
+File System == >> DataBases
+ Sql and Non Sql
+ examples of sql DataBases =  Mysql, OraacleDb, Maria Db , Postgre , 
+
+ Non Sql DataBases = MongoDBB,  hbase, Cassendra , redish , dynammo Db
+
+
+ MongoDb as a DataBases
+
+ = It a document DataBase.
+ = Flexible
+ =Json (Bson)
+= easu to learn
+=Simliar to Js Objects
+=It is very fast
+=Key value pair (store)
+
+ CAP THEREM 
+    C= CONSITENCY Sql they are higly consisten
+    A = AVAILABILTY 
+    P = PARTION TOLERANCE
